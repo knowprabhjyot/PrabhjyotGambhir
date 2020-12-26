@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const LeftPanel = () => {
     const classes = useStyles();
     return (
-            <Box className={classes.root} bgcolor="secondary.main">
+            <Box className={classes.root} bgcolor="primary.A600">
                 <Container>
                     <Box>
                         <CardMedia

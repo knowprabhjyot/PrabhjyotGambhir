@@ -9,11 +9,20 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: blueGrey[900],
+      A600: blueGrey[600]
     },
     secondary: {
       main: amber[700],
     },
   },
+  typography: {
+    h5: {
+      color: 'white'
+    },
+    h6: {
+      color: 'white'
+    }
+  }
 });
 
 ReactDOM.render(
