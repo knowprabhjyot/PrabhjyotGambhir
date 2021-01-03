@@ -15,7 +15,7 @@ const SkillSection = () => {
                             {item.value} %
                             </Typography>
                     </Box>
-                    <LinearProgress variant="determinate" value={item.value} />
+                    <LinearProgress color="secondary" variant="determinate" value={item.value} />
                 </Box>
             )
         })

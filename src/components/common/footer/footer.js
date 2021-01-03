@@ -1,4 +1,4 @@
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
 const Footer = () => {
@@ -6,10 +6,14 @@ const Footer = () => {
         <Box padding="12px" bgcolor="primary.A600">
             <Grid container display="flex" justify="space-between">
                 <Grid item>
-                    © 2020 All Rights Reserved.
+                    <Typography variant="body2">
+                        © 2020 All Rights Reserved.
+                    </Typography>
                 </Grid>
                 <Grid item>
-                    Email : knowprabhjyot@gmail.com
+                    <Typography variant="body2">
+                        Email : knowprabhjyot@gmail.com
+                    </Typography>
                 </Grid>
             </Grid>
         </Box>

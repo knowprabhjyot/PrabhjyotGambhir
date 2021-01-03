@@ -7,27 +7,27 @@ const LanguageSection = () => {
         languageData.map((item, index) => {
             return (
                 <div key={index}>
-                <Box position="relative" display="inline-flex" key={index} flexDirection="column">
-                    <CircularProgress variant="determinate" value={item.value} />
-                    <Box
-                        top={0}
-                        left={0}
-                        bottom={0}
-                        right={0}
-                        position="absolute"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
-                            item.value,
-                        )}%`}
-                        </Typography>
+                    <Box position="relative" display="inline-flex" key={index} flexDirection="column">
+                        <CircularProgress size="3rem" color="secondary" variant="determinate" value={item.value} />
+                        <Box
+                            top={0}
+                            left={0}
+                            bottom={0}
+                            right={0}
+                            position="absolute"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Typography variant="subtitle2" component="p">{`${Math.round(
+                                item.value,
+                            )}%`}
+                            </Typography>
+                        </Box>
                     </Box>
-                </Box>
-                <Typography component="p">
-                            {item.name}
-                </Typography>
+                    <Typography component="p">
+                        {item.name}
+                    </Typography>
                 </div>
             )
         })

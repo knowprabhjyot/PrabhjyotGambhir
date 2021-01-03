@@ -2,25 +2,54 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import blueGrey from '@material-ui/core/colors/blueGrey';
-import amber from '@material-ui/core/colors/amber';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: blueGrey[900],
-      A600: blueGrey[600]
+      main: '#20202a',
+      A600: '#2c2c36',
+      A700: '#8c8c8e',
     },
     secondary: {
-      main: amber[700],
+      main: '#f7bb08',
     },
   },
   typography: {
-    h5: {
-      color: 'white'
+    allVariants: {
+      color: '#fff',
+      fontFamily: 'Rubik'
     },
-    h6: {
-      color: 'white'
+    body2: {
+      color: '#8c8c8e'
+    },
+    subtitle2: {
+      color: '#fff'
+    }
+  },
+  overrides: {
+    MuiButton: {
+      outlinedSecondary: {
+        // color: '#fff',
+        fontFamily: [
+          'Rubik'
+        ],
+        '&:hover': {
+          color: '#fff',
+          backgroundColor: '#f7bb08' 
+      },
+      borderRadius: 'unset'
+      },
+      containedPrimary: {
+        // color: '#fff',
+        fontFamily: [
+          'Rubik'
+        ],
+        '&:hover': {
+          color: '#fff',
+          backgroundColor: '#f7bb08' 
+      },
+      borderRadius: 'unset'
+      }
     }
   }
 });

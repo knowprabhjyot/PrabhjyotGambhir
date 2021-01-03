@@ -22,69 +22,81 @@ const useStyles = makeStyles({
         borderRadius: '50%',
         margin: 'auto'
     },
+    details: {
+        color: '#fff'
+    }
 });
 
 const LeftPanel = () => {
     const classes = useStyles();
     return (
-            <Box className={classes.root} bgcolor="primary.A600">
-                <Container>
-                    <Box>
-                        <CardMedia
-                            className={classes.media}
-                            image="./images/me.jpg"
-                            title="Prabhjyot Gambhir"
-                        />
-                        <CardContent>
-                            <Box display="grid" gridGap="8px">
-                                <div>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        Prabhjyot Gambhir
-                </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        Full Stack Web Developer
-                </Typography>
-                                </div>
-                                <div>
-                                    <Grid container>
-                                        <Grid item xs={3}>
-                                            Residence:
-                            </Grid>
-                                        <Grid item xs={9}>
-                                            India
-                            </Grid>
-                                        <Grid item xs={3}>
-                                            City:
-                            </Grid>
-                                        <Grid item xs={9}>
-                                            Delhi
-                            </Grid>
-                                        <Grid item xs={3}>
-                                            Age
-                            </Grid>
-                                        <Grid item xs={9}>
-                                            26
-                            </Grid>
-                                    </Grid>
-                                </div>
-                                <Divider />
-                                <Box display="flex" justifyContent="space-evenly">
-                                    <LanguageSection />
-                                </Box>
-                                <Divider />
-                                <Box display="flex" flexDirection="column">
-                                    <SkillSection />
-                                </Box>
-                                <Divider />
-                                <Box>
-                                    <SocialSection />
-                                </Box>
+        <Box className={classes.root} bgcolor="primary.A600">
+            <Container>
+                <Box>
+                    <CardMedia
+                        className={classes.media}
+                        image="./images/me.jpg"
+                        title="Prabhjyot Gambhir"
+                    />
+                    <CardContent>
+                        <Box display="grid" gridGap="16px">
+                            <Box display="flex" flexDirection="column" alignItems="center">
+                                <Typography variant="h5" component="h2">
+                                    Prabhjyot Gambhir
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    Full Stack Web Developer
+                                </Typography>
                             </Box>
-                        </CardContent>
+                            <Divider />
+                            <div>
+                                <Grid container>
+                                    <Box width="100%" display="grid" gridTemplateColumns="auto" gridGap="8px">
+                                    <Box display="flex" justifyContent="space-between">
+                                    <Typography variant="subtitle2">
+                                        Residence:
+                                    </Typography>
+                                    <Typography variant="body2">
+                                        India
+                                    </Typography>
+                                    </Box>
+                                    <Box display="flex" justifyContent="space-between">
+                                    <Typography variant="subtitle2">
+                                        City:
+                                    </Typography>
+                                    <Typography variant="body2">
+                                        Delhi
+                                    </Typography>
+                                    </Box>
+                                    <Box display="flex" justifyContent="space-between">
+                                    <Typography variant="subtitle2">
+                                        Age
+                                    </Typography>
+                                    <Typography variant="body2">
+                                        26
+                                    </Typography>
+                                    </Box>
+                                    </Box>
+                                </Grid>
+                            </div>
+                            <Divider />
+                            <Box display="flex" justifyContent="space-around" >
+                                <LanguageSection />
+                            </Box>
+                            <Divider />
+                            <Box display="flex" flexDirection="column">
+                                <SkillSection />
+                            </Box>
+                            <Divider />
+                            <Box>
+                                <SocialSection />
+                            </Box>
+                        </Box>
+                    </CardContent>
 
-                    </Box>
-                </Container>
-            </Box>
+                </Box>
+            </Container>
+        </Box>
     )
 }
 

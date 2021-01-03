@@ -9,11 +9,11 @@ import { Box } from '@material-ui/core';
 const SocialSection = () => {
     return (
         <Box display="flex" justifyContent="space-between">
-            <FacebookIcon />
-            <LinkedInIcon />
-            <InstagramIcon />
-            <TwitterIcon />
-            <GitHubIcon />
+            <FacebookIcon color="secondary" />
+            <LinkedInIcon color="secondary" />
+            <InstagramIcon color="secondary" />
+            <TwitterIcon  color="secondary"/>
+            <GitHubIcon  color="secondary" />
         </Box>
     )
 }
