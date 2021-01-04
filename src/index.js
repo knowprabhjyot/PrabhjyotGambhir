@@ -51,7 +51,7 @@ const theme = createMuiTheme({
       borderRadius: 'unset'
       }
     }
-  }
+  },
 });
 
 ReactDOM.render(

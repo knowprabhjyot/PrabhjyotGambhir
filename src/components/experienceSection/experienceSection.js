@@ -1,17 +1,7 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
-
-const useStyles = makeStyles({
-    textValue: {
-        display: 'flex',
-        justifyContent: 'space-between'
-    }
-});
-
-
 const ExperienceSection = () => {
-    const classes = useStyles();
     const experenceData = [{ name: 'Years Experience', value: 4 }, { name: 'Completed Projects', value: 10 }, { name: 'Companies Worked with', value: 3 }];
 
 

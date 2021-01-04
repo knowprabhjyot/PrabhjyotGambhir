@@ -52,7 +52,7 @@ const BannerSection = () => {
                         </Box>
                    </Grid>
                    <Grid item xs={8}>
-                        <img className={classes.image} src="./images/me2.png" />
+                        <img className={classes.image} src="./images/me4.png" />
                    </Grid>
                </Grid>
             </Box>
