@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2000;
 const bodyParser = require('body-parser')// importing body parser middleware to parse form content from HTML
 const nodemailer = require('nodemailer');//importing node mailer
 const cors = require('cors');
