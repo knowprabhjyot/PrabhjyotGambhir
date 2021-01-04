@@ -18,7 +18,7 @@ const showSkill = () => {
     return skillSetData.map((item, index) => {
         return (
                 <Grid key={index} item xs={4}>
-                    <Card data={item} />
+                    <Card buttonLabel="Learn More" showButton={true} data={item} />
                 </Grid>
             )
     })

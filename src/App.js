@@ -21,7 +21,6 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Box bgcolor="primary.main" className={classes.box}>
-        <Box className={classes.box}  bgcolor="primary.A700">
         <Grid container spacing={3}>
           <Grid item xs={3}>
             <LeftPanel />
@@ -30,7 +29,6 @@ const App = () => {
             <Routes />
           </Grid>
         </Grid>
-        </Box>
       </Box>
     </div>
   )
