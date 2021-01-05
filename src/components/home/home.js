@@ -6,7 +6,7 @@ import SkillSetSecton from '../skillsetSection/skillsetSection';
 
 
 const bannerConfig = {
-    title: 'I know I got this!',
+    title: 'You Know I got this!',
     image: '../images/banner.jpg',
     image2: '../images/me4.png'
 }

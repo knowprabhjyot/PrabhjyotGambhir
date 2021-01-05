@@ -34,7 +34,7 @@ const Header = () => {
     )
 }
 
-const headerData = [{ name: 'Home', to: '' }, { name: 'About', to: '/about' }, { name: 'Portfolio', to: '/portfolio' }, { name: 'Contact', to: '/contact' }, { name: 'Blog', to: '/blog' }]
+const headerData = [{ name: 'Home', to: '' }, { name: 'About', to: '/about' }, { name: 'Portfolio', to: '/portfolio' }, { name: 'Contact', to: '/contact' }]
 
 
 

@@ -6,6 +6,7 @@ import Footer from './components/common/footer/footer';
 import Header from './components/common/header/header';
 import Contact from './components/contact/contact';
 import Home from './components/home/home';
+import Portfolio from './components/portfolio/portfolio';
 
 const Routes = () => {
     return (
@@ -17,6 +18,7 @@ const Routes = () => {
                         <Route exact path="/" component={Home} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/about" component={About} />
+                        <Route path="/portfolio" component={Portfolio}/>
                     </Switch>
                     <Footer />
                 </Box>
