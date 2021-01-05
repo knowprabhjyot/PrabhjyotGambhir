@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import About from './components/about/about';
@@ -13,6 +13,7 @@ const Routes = () => {
         <div>
             <BrowserRouter>
                 <Header />
+                <Grid item xs={11} sm={12}>
                 <Box display="grid" gridGap="24px">
                     <Switch>
                         <Route exact path="/" component={Home} />
@@ -22,6 +23,7 @@ const Routes = () => {
                     </Switch>
                     <Footer />
                 </Box>
+                </Grid>
             </BrowserRouter>
         </div>
     )

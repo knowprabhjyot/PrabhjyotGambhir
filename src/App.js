@@ -3,8 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import LeftPanel from './components/leftPanel/leftPanel';
 import './App.css';
-import { Box } from '@material-ui/core';
+import { Box, Drawer, Hidden, IconButton } from '@material-ui/core';
 import Routes from './routes';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,19 +14,46 @@ const useStyles = makeStyles((theme) => ({
   box: {
     color: theme.palette.text.secondary,
     padding: theme.spacing(2),
-  }
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
 }));
+
 
 const App = () => {
   const classes = useStyles();
+  const [state, setState] = React.useState(false);
+
+  const showDrawer = () => {
+    return (
+      <Drawer anchor="left" open={state} onClose={() => setState(false)}>
+        <LeftPanel />
+      </Drawer>
+    )
+  }
+
   return (
     <div className={classes.root}>
       <Box bgcolor="primary.main" className={classes.box}>
         <Grid container spacing={3}>
-          <Grid item xs={3}>
-            <LeftPanel />
+          <Grid item lg={3} md={1} sm={1} xs={1}>
+            <Hidden mdDown>
+              <LeftPanel />
+            </Hidden>
+           <Hidden smUp>
+           <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => setState(true)}
+              edge="start"
+            >
+              <MenuIcon color="secondary" />
+            </IconButton>
+            {showDrawer()}
+           </Hidden>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item md={11} lg={9} sm={11} xs={11} >
             <Routes />
           </Grid>
         </Grid>

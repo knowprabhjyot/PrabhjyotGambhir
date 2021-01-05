@@ -1,4 +1,4 @@
-import { Box, Button, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Hidden, makeStyles, Typography } from '@material-ui/core';
 import { ArrowDownward } from '@material-ui/icons';
 import React from 'react';
 
@@ -6,7 +6,7 @@ import React from 'react';
 const BannerSection = (props) => {
 
 
-    const useStyles = makeStyles({
+    const useStyles = makeStyles((theme) => ({
         root: {
             // display: 'flex',
             // flexDirection: 'column',
@@ -18,10 +18,17 @@ const BannerSection = (props) => {
             height: '350px',
             position: 'absolute',
             right: 0,
-            top: -50
+            top: -50,
+            [theme.breakpoints.down("sm")]: {
+                height: '300px',
+                top: 0,
+            }
         },
         heading: {
-            color: 'white'
+            color: 'white',
+            [theme.breakpoints.down("xs")]: {
+                fontSize: '2.5rem'
+            }
         },
         bannerImage: {
             backgroundImage: `url(${props.bannerConfig.image})`,
@@ -30,7 +37,7 @@ const BannerSection = (props) => {
             height: '300px',
             position: 'relative'
         }
-    });
+    }));
 
 
     const classes = useStyles();
@@ -38,18 +45,20 @@ const BannerSection = (props) => {
         <Box bgcolor="primary.A700">
             <Box display="flex" alignItems="center" className={classes.bannerImage}>
                 <Grid container>
-                    <Grid item xs={4}>
+                    <Grid item xs={6} sm={6} md={4}>
                         <Box padding="32px">
                             <Typography variant="h3" className={classes.heading}>
                                 {props.bannerConfig.title}
                             </Typography>
-                            <Button color="primary" variant="contained">
-                                Explore Now
+                            <Hidden xsDown>
+                                <Button color="primary" variant="contained">
+                                    Explore Now
                     <ArrowDownward />
-                            </Button>
+                                </Button>
+                            </Hidden>
                         </Box>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={6}>
                         <img alt="me" className={classes.image} src={props.bannerConfig.image2} />
                     </Grid>
                 </Grid>
