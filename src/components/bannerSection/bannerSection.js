@@ -1,5 +1,4 @@
-import { Box, Button, Grid, Hidden, makeStyles, Typography } from '@material-ui/core';
-import { ArrowDownward } from '@material-ui/icons';
+import { Box,Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 
 
@@ -50,12 +49,6 @@ const BannerSection = (props) => {
                             <Typography variant="h3" className={classes.heading}>
                                 {props.bannerConfig.title}
                             </Typography>
-                            <Hidden xsDown>
-                                <Button color="primary" variant="contained">
-                                    Explore Now
-                    <ArrowDownward />
-                                </Button>
-                            </Hidden>
                         </Box>
                     </Grid>
                     <Grid item xs={6}>

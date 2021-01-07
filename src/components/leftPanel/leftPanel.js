@@ -1,47 +1,72 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { Box, Container, Divider, Grid } from '@material-ui/core';
+import { Avatar, Box, Container, Divider, Grid } from '@material-ui/core';
 import LanguageSection from './languageSection/languageSection';
 import SkillSection from './skillSection/skillSection';
 import SocialSection from './socialSection/socialSection';
+import Badge from '@material-ui/core/Badge';
 
 const useStyles = makeStyles({
     root: {
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
-        // justifyContent: 'center'
         paddingTop: '32px',
-        height: '100%'
+        textAlign: 'center'
     },
     media: {
         height: 120,
         width: 120,
-        borderRadius: '50%',
-        margin: 'auto'
     },
     details: {
         color: '#fff'
     },
-    container: {
-        height: '100%'
-    }
 });
 
 const LeftPanel = () => {
     const classes = useStyles();
+    const StyledBadge = withStyles((theme) => ({
+        badge: {
+          backgroundColor: '#44b700',
+          color: '#44b700',
+          boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+          '&::after': {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            borderRadius: '50%',
+            animation: '$ripple 1.2s infinite ease-in-out',
+            border: '1px solid currentColor',
+            content: '""',
+          },
+        },
+        '@keyframes ripple': {
+          '0%': {
+            transform: 'scale(.8)',
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'scale(2.4)',
+            opacity: 0,
+          },
+        },
+      }))(Badge);
+
     return (
         <Box className={classes.root} bgcolor="primary.A600">
-            <Container className={classes.container}>
+            <Container>
                 <Box>
-                    <CardMedia
-                        className={classes.media}
-                        image="./images/me.jpg"
-                        title="Prabhjyot Gambhir"
-                    />
+                    <StyledBadge
+                        overlap="circle"
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        variant="dot"
+                    >
+                        <Avatar className={classes.media} alt="Prabhjyot Gambhir" src="../images/me.jpg" />
+                    </StyledBadge>
                     <CardContent>
                         <Box display="grid" gridGap="16px">
                             <Box display="flex" flexDirection="column" alignItems="center">

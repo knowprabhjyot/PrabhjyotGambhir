@@ -1,4 +1,4 @@
-import { Box, Container, makeStyles } from '@material-ui/core';
+import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Card from '../common/card/card';
@@ -43,6 +43,13 @@ const Portfolio = () => {
 
     return (
         <Container maxWidth="lg">
+             <Typography variant="h5">
+                Portfolio
+            </Typography>
+            <Box display="grid" gridGap="32px">
+                <Typography variant="body2">
+                    A developer's experience says its all
+            </Typography>
              <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
             >
@@ -50,6 +57,8 @@ const Portfolio = () => {
                {showPort()}
             </Masonry>
             </ResponsiveMasonry>
+            </Box>
+
         </Container>
     )
 }

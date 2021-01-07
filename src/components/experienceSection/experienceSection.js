@@ -1,5 +1,7 @@
 import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
+import CountUp from 'react-countup';
+import { CSSTransition } from 'react-transition-group';
 
 const useStyles = makeStyles((theme) => ({
     itemName: {
@@ -23,16 +25,23 @@ const ExperienceSection = () => {
     const showExperience = () => {
         return experenceData.map((item, index) => {
             return (
+                <CSSTransition
+                    in={true}
+                    timeout={300}
+                    unmountOnExit
+                >
                 <Grid item lg={3} md={6} xs={6} key={index}>
                     <Box className={classes.itemContainer} display="flex" alignItems="center" >
                         <Typography className={classes.itemName} color="secondary" variant="h6">
-                            {item.value}
+                            <CountUp end={item.value} delay={1} duration={2} suffix="+">
+                        </CountUp>
                             </Typography>
                         <Typography className={classes.itemName} variant="subtitle2">
                             {item.name}
                         </Typography>
                     </Box>
                 </Grid>
+                </CSSTransition>
             )
         })
     }

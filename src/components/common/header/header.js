@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     arrow: {
         [theme.breakpoints.down("xs")]: {
             position: 'absolute',
-            top: '12px',
+            top: '40px',
             right: 0
         }
     },

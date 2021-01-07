@@ -9,11 +9,21 @@ import { Box } from '@material-ui/core';
 const SocialSection = () => {
     return (
         <Box display="flex" justifyContent="space-between">
+        <a rel = "noopener noreferrer" href="https://www.facebook.com/prabhjotgambhir" target = "_blank">
             <FacebookIcon color="secondary" />
+        </a>
+        <a rel = "noopener noreferrer" href="https://www.linkedin.com/in/prabhjyot-g-3832b5116/" target = "_blank">
             <LinkedInIcon color="secondary" />
+        </a>
+        <a rel = "noopener noreferrer" href="https://www.instagram.com/prabhjyot_gambhir/" target = "_blank">
             <InstagramIcon color="secondary" />
+        </a>
+        <a rel = "noopener noreferrer" href="https://twitter.com/PrabhjyotGambh1" target = "_blank">
             <TwitterIcon  color="secondary"/>
+        </a>
+        <a rel = "noopener noreferrer" href="https://github.com/knowprabhjyot" target = "_blank">
             <GitHubIcon  color="secondary" />
+        </a>
         </Box>
     )
 }
