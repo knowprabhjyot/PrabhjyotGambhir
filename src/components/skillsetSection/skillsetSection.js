@@ -8,12 +8,13 @@ const SkillSetSecton = () => {
     )
 }
 
-const skillSetData = [{title: 'Front End Development', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
-{title: 'Back End Development', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
-{title: 'Graphics Design', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
-{title: 'UI/UX Design', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
-{title: 'Devops', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
-{title: 'Front End Development', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'}];
+const skillSetData = [
+{title: 'Front End Development', description: "Front End is the backbone of a website, if a user isn't impressed with the design, he may just bounce back."},
+{title: 'Back End Development', description: "The other piller of a great website, if the webstie is slow or doesn't show logic promise the user may never come back."},
+{title: 'Graphics Design', description: "A company is not remembered from the name, it's remembered from the branding, logo and graphics which user remembers."},
+{title: 'UI/UX Design', description: "If the flow of the website ain't good, what good it would do making user's life more difficult."},
+{title: 'Devops', description: "Continuous deployment, is required big time in today's time it saves huge hassle and makes developers like easier."},
+{title: 'SEO', description: "A business with no customers, ain't a business at all, So social media presence is required to make the customers engaging."}];
 const showSkill = () => {
     return skillSetData.map((item, index) => {
         return (

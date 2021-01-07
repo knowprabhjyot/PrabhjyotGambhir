@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Typography } from '@material-ui/core';
 import React from 'react';
 
-const languageData = [{ name: 'English', value: 100 }, { name: 'French', value: 60 }];
+const languageData = [{ name: 'English', value: 100 }, { name: 'French', value: 40 }];
 const LanguageSection = () => {
     return (
         languageData.map((item, index) => {

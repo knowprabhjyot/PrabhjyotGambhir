@@ -1,4 +1,6 @@
 import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+
 import React from 'react';
 
 
@@ -17,7 +19,9 @@ const Footer = () => {
             <Grid container display="flex" justify="space-between" className={classes.container}>
                 <Grid item>
                     <Typography variant="body2">
-                        © 2020 All Rights Reserved.
+                        <Box display="flex" alignItems="center">
+                            Made with  <FavoriteIcon style={{padding: '0px 4px'}} color="secondary"/>  by Prabhjyot
+                        </Box>
                     </Typography>
                 </Grid>
                 <Grid item>

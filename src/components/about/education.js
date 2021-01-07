@@ -1,7 +1,6 @@
-import { Hidden, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@material-ui/lab';
 import React from 'react';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
 import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import Card from '../common/card/card';
 import SchoolIcon from '@material-ui/icons/School';
@@ -52,10 +51,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const educationData = [
-    { title: 'Keysight Technologies', description: 'Working in Keysight as R&D Engineer' },
-    { title: 'Indrik Technologies', description: 'Worked as Software Engineer for a product called Referyaar' },
-    { title: 'Indraprastha University', description: 'Completed in Computer Science Blah blah' },
-    { title: 'Delhi Public School', subTitle: 'Secondary School', showTag: 'May 2012', description: 'Completed with Physcs, Chemistry, Maths' }];
+    { title: 'Keysight Technologies', description: 'Working in Keysight have been an amazing journey so far, from products like Pathwave Cloud to Switch Manager, From Core Front End Engineer to participating in Hackathons have been a luxury. From implementing complex data structures and syncing data with Heavy Hardwares may seem easy but its sweat and patience. ' },
+    { title: 'Indrik Technologies', description: "This Being a well funded startup, directed by IIM & IIT aluminis was a hell of a ride, from developing things from scratch to fixing bugs over midnight. With more than active daily 10k user once to 100k+ android downloads. REFERYAAR a social referral and earning platform changed my view regarding how the slightest of UX/UI can make a difference" },
+    { title: 'Indraprastha University', description: "Studies have bored me, but Engineering have made me of what I am today. I don't brag about Grades because I had the worst of them haha! But Experience I gained was way over mere marks. With developing Home Automation App to Learning Data Structures and Algorithms, Programming have been my favorite subject above all" },
+    { title: 'Delhi Public School', subTitle: 'Secondary School', showTag: 'May 2012', description: "Delhi Public School isn't just  any other school, its a school of culture and aspirations. From being optimistic to being ambitious that's what this school taught me. Science Stream is amazing, it helps you open your mind and think out of the box"}];
 
 const Education = () => {
     const classes = useStyles();
@@ -66,13 +65,13 @@ const Education = () => {
                     <TimelineOppositeContent className={classes.timelineOppositeContent} >
                         <Card subTitle="R&D Engineer" showButton={true} buttonLabel="Work Samples" showTag="Feb 2019 - Current" data={educationData[0]} />
                     </TimelineOppositeContent>
-                    <TimelineSeparator className={classes.seperator} className={classes.seperator}>
+                    <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="secondary">
                             <WorkIcon />
                         </TimelineDot>
                         <TimelineConnector className={classes.connector} />
                     </TimelineSeparator>
-                    <TimelineContent className={classes.timelineContent} className={classes.timelineContent}>
+                    <TimelineContent className={classes.timelineContent}>
                             <Typography variant="h5" className={classes.heading} >
                                 Current Employment
                         </Typography>
@@ -82,13 +81,13 @@ const Education = () => {
                     <TimelineOppositeContent className={classes.timelineOppositeContent}>
                         <Card subTitle="Software Engineer" showButton={true} buttonLabel="Work Samples" showTag="Oct 2018 - Feb 2019" data={educationData[1]} />
                     </TimelineOppositeContent>
-                    <TimelineSeparator className={classes.seperator} className={classes.seperator}>
+                    <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="primary">
                             <LaptopMacIcon />
                         </TimelineDot>
                         <TimelineConnector className={classes.connector} />
                     </TimelineSeparator>
-                    <TimelineContent className={classes.timelineContent} className={classes.timelineContent}>
+                    <TimelineContent className={classes.timelineContent}>
                             <Typography variant="h5" className={classes.heading} >
                                 Former Employment
                     </Typography>
@@ -98,13 +97,13 @@ const Education = () => {
                     <TimelineOppositeContent className={classes.timelineOppositeContent}>
                         <Card subTitle="Bachelors in Technology" showButton={true} buttonLabel="Degree" showTag="Aug 2013 - May 2017" data={educationData[2]} />
                     </TimelineOppositeContent>
-                    <TimelineSeparator className={classes.seperator} className={classes.seperator}>
+                    <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="secondary">
                             <SchoolIcon />
                         </TimelineDot>
                         <TimelineConnector className={classes.connector} />
                     </TimelineSeparator>
-                    <TimelineContent className={classes.timelineContent} className={classes.timelineContent}>
+                    <TimelineContent className={classes.timelineContent}>
                             <Typography className={classes.heading} variant="h5" >
                                 Graduation
                         </Typography>

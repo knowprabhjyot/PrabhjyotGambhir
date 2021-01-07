@@ -29,6 +29,7 @@ const Portfolio = () => {
                 <Box className={classes.container}  onMouseEnter={() => setCardView(index)}
                 onMouseLeave={() => setCardView(-1)}>
                      <img
+                        alt="Prabhjyot Gambhir"
                         key={index}
                         src={item.image}
                         className={classes.image}
@@ -51,7 +52,7 @@ const Portfolio = () => {
                     A developer's experience says its all
             </Typography>
              <ResponsiveMasonry
-                columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+                columnsCountBreakPoints={{350: 1, 750: 2, 900: 2}}
             >
             <Masonry gutter="10px">
                {showPort()}
@@ -64,8 +65,8 @@ const Portfolio = () => {
 }
 
 const portfolioData = [
-    { title: 'Maven Scholars', description: 'Developed Maven scholars from scratch in React & Node and officially I am the Co-Founder of the company', image: '../images/web1.jpg' },
-    { title: 'Website 3', description: 'Website 3 description', image: '../images/web3.jpg' },
+    { title: 'Maven Scholars', description: 'Developed Maven scholars using React & Node. Implemented Continuous deployment using AWS', image: '../images/web6.jpg' },
+    { title: 'Know Prabhjyot', description: 'The Web Resume which you are viewing, obviously it is my product too. Made with love in React and Node js and Fully Responsive Website.', image: '../images/web7.jpg' },
     { title: 'Card Design', description: 'Card design description', image: '../images/carddesign.jpg' },
     { title: 'Website 4', description: 'Website 4 description', image: '../images/web4.jpg' },
     { title: 'Website 5', description: 'Website 5 description', image: '../images/web5.jpg' },

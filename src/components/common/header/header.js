@@ -28,11 +28,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         [theme.breakpoints.down("md")]: {
             position: 'absolute',
-            top: 0,
+            top: '40px',
             left: '48px'
         },
         [theme.breakpoints.down("sm")]: {
-            top: 0,
             left: 'unset',
             right: '48px'
         }

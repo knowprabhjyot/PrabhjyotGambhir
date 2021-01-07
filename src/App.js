@@ -6,7 +6,7 @@ import './App.css';
 import { AppBar, Box, Drawer, Hidden, IconButton, Switch, Typography } from '@material-ui/core';
 import Routes from './routes';
 import MenuIcon from '@material-ui/icons/Menu';
-import { cyan, deepPurple, grey, lightBlue } from '@material-ui/core/colors';
+import { cyan, grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
