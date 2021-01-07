@@ -1,10 +1,20 @@
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 
+
+const useStyles = makeStyles((theme) => ({
+    container: {
+        [theme.breakpoints.down("xs")]: {
+        justifyContent: 'center'
+    }
+    }
+}));  
+
 const Footer = () => {
+    const classes = useStyles();
     return (
         <Box padding="12px" bgcolor="primary.A600">
-            <Grid container display="flex" justify="space-between">
+            <Grid container display="flex" justify="space-between" className={classes.container}>
                 <Grid item>
                     <Typography variant="body2">
                         © 2020 All Rights Reserved.

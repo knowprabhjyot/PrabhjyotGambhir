@@ -13,7 +13,6 @@ const Routes = () => {
         <div>
             <BrowserRouter>
                 <Header />
-                <Grid item xs={11} sm={12}>
                 <Box display="grid" gridGap="24px">
                     <Switch>
                         <Route exact path="/" component={Home} />
@@ -23,7 +22,6 @@ const Routes = () => {
                     </Switch>
                     <Footer />
                 </Box>
-                </Grid>
             </BrowserRouter>
         </div>
     )

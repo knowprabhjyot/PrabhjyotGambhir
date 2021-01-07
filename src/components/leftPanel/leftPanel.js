@@ -14,7 +14,8 @@ const useStyles = makeStyles({
         // flexDirection: 'column',
         // alignItems: 'center',
         // justifyContent: 'center'
-        paddingTop: '32px'
+        paddingTop: '32px',
+        height: '100%'
     },
     media: {
         height: 120,
@@ -24,6 +25,9 @@ const useStyles = makeStyles({
     },
     details: {
         color: '#fff'
+    },
+    container: {
+        height: '100%'
     }
 });
 
@@ -31,7 +35,7 @@ const LeftPanel = () => {
     const classes = useStyles();
     return (
         <Box className={classes.root} bgcolor="primary.A600">
-            <Container>
+            <Container className={classes.container}>
                 <Box>
                     <CardMedia
                         className={classes.media}

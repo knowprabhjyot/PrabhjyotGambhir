@@ -1,6 +1,6 @@
 import { Box, Container, makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
-import Masonry from "react-responsive-masonry"
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Card from '../common/card/card';
 
 const useStyles = makeStyles((theme) => ({
@@ -43,9 +43,13 @@ const Portfolio = () => {
 
     return (
         <Container maxWidth="lg">
-            <Masonry columnsCount={3} gutter="10px">
+             <ResponsiveMasonry
+                columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            >
+            <Masonry gutter="10px">
                {showPort()}
             </Masonry>
+            </ResponsiveMasonry>
         </Container>
     )
 }

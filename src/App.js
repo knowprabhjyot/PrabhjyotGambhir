@@ -37,11 +37,11 @@ const App = () => {
     <div className={classes.root}>
       <Box bgcolor="primary.main" className={classes.box}>
         <Grid container spacing={3}>
-          <Grid item lg={3} md={1} sm={1} xs={1}>
+          <Grid item lg={3}>
             <Hidden mdDown>
               <LeftPanel />
             </Hidden>
-           <Hidden smUp>
+           <Hidden lgUp>
            <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -53,7 +53,7 @@ const App = () => {
             {showDrawer()}
            </Hidden>
           </Grid>
-          <Grid item md={11} lg={9} sm={11} xs={11} >
+          <Grid item lg={9} xs={12} >
             <Routes />
           </Grid>
         </Grid>
