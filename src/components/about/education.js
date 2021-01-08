@@ -63,7 +63,7 @@ const Education = () => {
             <Timeline className={classes.timeline} align="alternate">
                 <TimelineItem className={classes.timelineItem}>
                     <TimelineOppositeContent className={classes.timelineOppositeContent} >
-                        <Card subTitle="R&D Engineer" showButton={true} buttonLabel="Work Samples" showTag="Feb 2019 - Current" data={educationData[0]} />
+                        <Card link="/portfolio" subTitle="R&D Engineer" showButton={true} buttonLabel="Work Samples" showTag="Feb 2018 - Current" data={educationData[0]} />
                     </TimelineOppositeContent>
                     <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="secondary">
@@ -79,7 +79,7 @@ const Education = () => {
                 </TimelineItem>
                 <TimelineItem className={classes.timelineItem}>
                     <TimelineOppositeContent className={classes.timelineOppositeContent}>
-                        <Card subTitle="Software Engineer" showButton={true} buttonLabel="Work Samples" showTag="Oct 2018 - Feb 2019" data={educationData[1]} />
+                        <Card link="/portfolio" subTitle="Software Engineer" showButton={true} buttonLabel="Work Samples" showTag="Oct 2017 - Feb 2018" data={educationData[1]} />
                     </TimelineOppositeContent>
                     <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="primary">
@@ -95,7 +95,7 @@ const Education = () => {
                 </TimelineItem>
                 <TimelineItem className={classes.timelineItem}>
                     <TimelineOppositeContent className={classes.timelineOppositeContent}>
-                        <Card subTitle="Bachelors in Technology" showButton={true} buttonLabel="Degree" showTag="Aug 2013 - May 2017" data={educationData[2]} />
+                        <Card path="../doc/degree.pdf" subTitle="Bachelors in Technology" showButton={true} buttonLabel="Degree" showTag="Aug 2013 - May 2017" data={educationData[2]} />
                     </TimelineOppositeContent>
                     <TimelineSeparator className={classes.seperator}>
                         <TimelineDot color="secondary">

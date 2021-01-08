@@ -1,11 +1,15 @@
 import { Box, Button, Chip, Grid, makeStyles, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     box: {
         padding: 24
     },
+    link: {
+        textDecoration: 'none'
+    }
 })
 
 
@@ -29,10 +33,18 @@ const Card = (props) => {
                </Box>
                {props.showButton ? <Grid container>
                    <Grid item xs={6}>
+                       {props.link ? 
+                       <Link className={classes.link} to={props.link}>
                        <Button fullWidth variant="outlined" color="secondary">
                            {props.buttonLabel}
                            <ArrowForward />
                        </Button>
+                       </Link> : <a href={props.path} className={classes.link}  target="_blank">
+                       <Button fullWidth variant="outlined" color="secondary">
+                           {props.buttonLabel}
+                           <ArrowForward />
+                       </Button>
+                        </a>}
                    </Grid>
                </Grid> : null}
            </Box>
