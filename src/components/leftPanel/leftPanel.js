@@ -7,6 +7,7 @@ import LanguageSection from './languageSection/languageSection';
 import SkillSection from './skillSection/skillSection';
 import SocialSection from './socialSection/socialSection';
 import Badge from '@material-ui/core/Badge';
+import { useSpring, animated } from 'react-spring';
 
 const useStyles = makeStyles({
     root: {
@@ -24,6 +25,8 @@ const useStyles = makeStyles({
 
 const LeftPanel = () => {
     const classes = useStyles();
+    const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+
     const StyledBadge = withStyles((theme) => ({
         badge: {
           backgroundColor: '#44b700',
@@ -54,6 +57,7 @@ const LeftPanel = () => {
       }))(Badge);
 
     return (
+        <animated.div style={props}>
         <Box className={classes.root} bgcolor="primary.A600">
             <Container>
                 <Box>
@@ -126,6 +130,8 @@ const LeftPanel = () => {
                 </Box>
             </Container>
         </Box>
+        </animated.div>
+
     )
 }
 
