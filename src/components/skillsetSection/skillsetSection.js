@@ -1,7 +1,6 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
 import Card from '../common/card/card';
-import {useSpring, animated} from 'react-spring'
 
 const SkillSetSecton = () => {
     return (
@@ -11,14 +10,13 @@ const SkillSetSecton = () => {
 
 const skillSetData = [
 {title: 'Front End Development', description: "Front End is the backbone of a website, if a user isn't impressed with the design, he may just bounce back."},
-{title: 'Back End Development', description: "The other piller of a great website, if the webstie is slow or doesn't show logic promise the user may never come back."},
+{title: 'Back End Development', description: "The other piller of a great website, if the website is slow or doesn't show logic promise the user may never come back."},
 {title: 'Graphics Design', description: "A company is not remembered from the name, it's remembered from the branding, logo and graphics which user remembers."},
 {title: 'UI/UX Design', description: "If the flow of the website ain't good, what good it would do making user's life more difficult."},
 {title: 'Devops', description: "Continuous deployment, is required big time in today's time it saves huge hassle and makes developers like easier."},
 {title: 'SEO', description: "A business with no customers, ain't a business at all, So social media presence is required to make the customers engaging."}];
 const showSkill = () => {
     return skillSetData.map((item, index) => {
-        const props = useSpring({opacity: 1, from: {opacity: 0}})
         return (
                 <Grid key={index} item xs={12} md={4} sm={6} >
                     <Card data={item} />

@@ -47,6 +47,11 @@ const Header = () => {
             <Drawer anchor="right" open={state} onClose={() => setState(false)}>
                 <Box height="100vh" display="flex" flexDirection="column" bgcolor="primary.main">
                     {showNav()}
+                    <a href="../doc/resume.pdf" className={classes.listItem}  target="_blank">
+                    <Button fullWidth type="submit" color="secondary" variant="outlined">
+                        Resume
+                    </Button>
+                    </a>
                 </Box>
             </Drawer>
         )
@@ -70,6 +75,11 @@ const Header = () => {
                 <Hidden xsDown>
                     <Box className={classes.nav}>
                         {showNav()}
+                        <a href="../doc/resume.pdf" className={classes.listItem}  target="_blank">
+                    <Button type="submit" color="secondary" variant="outlined">
+                        Resume
+                    </Button>
+                    </a>    
                     </Box>
                 </Hidden>
                 <Hidden smUp >

@@ -1,7 +1,6 @@
 import { Box, Button, Chip, Grid, makeStyles, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
-import { Skeleton } from '@material-ui/lab';
-import React, { useState } from 'react';
+import React from 'react';
 
 const useStyles = makeStyles({
     box: {

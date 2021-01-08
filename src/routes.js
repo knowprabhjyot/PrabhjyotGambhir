@@ -1,5 +1,5 @@
 import { Box, Grid, IconButton } from '@material-ui/core';
-import React, { useContext } from 'react';
+import React from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import About from './components/about/about';
 import Footer from './components/common/footer/footer';
@@ -7,7 +7,7 @@ import Header from './components/common/header/header';
 import Contact from './components/contact/contact';
 import Home from './components/home/home';
 import Portfolio from './components/portfolio/portfolio';
-import { animated, useTransition, usetransition } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from 'react-scroll';
 

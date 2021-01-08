@@ -17,7 +17,7 @@ const Home = () => {
             <BannerSection bannerConfig={bannerConfig} />
             <ExperienceSection />
             <Typography variant="h5">
-                My Skilset
+                My Skill Set
                 </Typography>
             <SkillSetSecton />
         </Box>
