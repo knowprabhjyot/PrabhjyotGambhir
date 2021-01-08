@@ -3,8 +3,6 @@ import React from 'react';
 
 const skillData = [{ name: 'React', value: 90 }, { name: 'Angular', value: 90 }, { name: 'JAVASCRIPT', value: 90 }, { name: 'HTML', value: 95 }, { name: 'CSS', value: 90 },];
 const SkillSection = () => {
-
-
     return (
         skillData.map((item, index) => {
             return (

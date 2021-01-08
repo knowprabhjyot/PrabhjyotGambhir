@@ -1,7 +1,7 @@
 import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { animated, useSpring } from 'react-spring';
 import Card from '../common/card/card';
 
 const useStyles = makeStyles((theme) => ({
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         position: 'absolute',
         bottom: 0,
-        width: '100%'
+        width: '100%',
     },
     image: {
         width: "100%",
@@ -27,22 +27,33 @@ const useStyles = makeStyles((theme) => ({
 const Portfolio = () => {
     const classes = useStyles();
     let [cardView, setCardView] = useState(-1);
+    const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
+
     const showPort = () => {
 
         return portfolioData.map((item, index) => {
             return (
-                <Box className={classes.container} onMouseEnter={() => setCardView(index)}
-                    onMouseLeave={() => setCardView(-1)}>
-                    <img
-                        alt="Prabhjyot Gambhir"
-                        key={index}
-                        src={item.image}
-                        className={classes.image}
-                    />
-                    <div className={classes.card}>
-                        {cardView === index ? <Card data={item} /> : null}
-                    </div>
-                </Box>
+                <animated.div
+                    class="card"
+                    onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+                    onMouseLeave={() => set({ xys: [0, 0, 1] })}
+                    style={ cardView === index ? { transform: props.xys.interpolate(trans) } : null}
+                >
+                    <Box className={classes.container} onMouseEnter={() => setCardView(index)}
+                        onMouseLeave={() => setCardView(-1)}>
+                        <img
+                            alt="Prabhjyot Gambhir"
+                            key={index}
+                            src={item.image}
+                            className={classes.image}
+                        />
+                        <div className={classes.card}>
+                            {cardView === index ? <Card data={item} /> : null}
+                        </div>
+                    </Box>
+                </animated.div>
             )
         })
     }

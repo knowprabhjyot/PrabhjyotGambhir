@@ -131,6 +131,7 @@ const Contact = (props) => {
                             fullWidth
                             disabled={disabled}
                             id="email"
+                            type="email"
                             label="Email Address"
                             name="email"
                             autoComplete="email"
@@ -150,6 +151,7 @@ const Contact = (props) => {
                             required
                             fullWidth
                             disabled={disabled}
+                            type="number"
                             id="contact"
                             label="Contact number"
                             name="contact"

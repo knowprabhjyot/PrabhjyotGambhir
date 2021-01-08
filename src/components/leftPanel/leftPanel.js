@@ -57,10 +57,11 @@ const LeftPanel = () => {
       }))(Badge);
 
     return (
-        <animated.div style={props}>
         <Box className={classes.root} bgcolor="primary.A600">
             <Container>
                 <Box>
+                <animated.div style={props}>
+
                     <StyledBadge
                         overlap="circle"
                         anchorOrigin={{
@@ -126,11 +127,10 @@ const LeftPanel = () => {
                             </Box>
                         </Box>
                     </CardContent>
-
+                    </animated.div>
                 </Box>
             </Container>
         </Box>
-        </animated.div>
 
     )
 }

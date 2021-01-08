@@ -156,7 +156,7 @@ const lightTheme = createMuiTheme({
       <Switch checked={darkState} onChange={handleThemeChange} />
       </Box>
     </AppBar>
-    <div className={classes.root}>
+    <div id="top" className={classes.root}>
       <Box bgcolor="primary.main" className={classes.box}>
         <Grid container spacing={3}>
           <Grid item lg={3}>
