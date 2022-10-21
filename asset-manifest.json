@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/PrabhjyotGambhir/static/css/main.98e6a1d2.chunk.css",
+    "main.js": "/PrabhjyotGambhir/static/js/main.08b122c8.chunk.js",
+    "main.js.map": "/PrabhjyotGambhir/static/js/main.08b122c8.chunk.js.map",
+    "runtime-main.js": "/PrabhjyotGambhir/static/js/runtime-main.8e90fce0.js",
+    "runtime-main.js.map": "/PrabhjyotGambhir/static/js/runtime-main.8e90fce0.js.map",
+    "static/js/2.c407a17f.chunk.js": "/PrabhjyotGambhir/static/js/2.c407a17f.chunk.js",
+    "static/js/2.c407a17f.chunk.js.map": "/PrabhjyotGambhir/static/js/2.c407a17f.chunk.js.map",
+    "index.html": "/PrabhjyotGambhir/index.html",
+    "static/css/main.98e6a1d2.chunk.css.map": "/PrabhjyotGambhir/static/css/main.98e6a1d2.chunk.css.map",
+    "static/js/2.c407a17f.chunk.js.LICENSE.txt": "/PrabhjyotGambhir/static/js/2.c407a17f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e90fce0.js",
+    "static/js/2.c407a17f.chunk.js",
+    "static/css/main.98e6a1d2.chunk.css",
+    "static/js/main.08b122c8.chunk.js"
+  ]
+}
